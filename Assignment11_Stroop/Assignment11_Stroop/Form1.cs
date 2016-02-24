@@ -15,6 +15,7 @@ namespace Assignment11_Stroop
         public Form1()
         {
             InitializeComponent();
+            Friend friend = new Friend();
         }
     }
 }

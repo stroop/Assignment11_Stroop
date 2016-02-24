@@ -15,9 +15,10 @@ namespace Assignment11_Stroop
         public int Month { get; set; }
         public int Day { get; set; }
 
+        // override ToString method
         public override string ToString()
         {
-            return String.Format("{0},{1},{2},{3},{4}", FirstName, LastName, PhoneNumber, Month, Day);
+            return string.Format("{0},{1},{2},{3},{4}", FirstName, LastName, PhoneNumber, Month, Day);
         }
     }
 }
