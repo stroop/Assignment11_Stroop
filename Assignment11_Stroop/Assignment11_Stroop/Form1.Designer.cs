@@ -47,7 +47,7 @@
             this.readBtn = new System.Windows.Forms.Button();
             this.readListBox = new System.Windows.Forms.ListBox();
             this.reminderTab = new System.Windows.Forms.TabPage();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.reminderTxt = new System.Windows.Forms.TextBox();
             this.exitBtn3 = new System.Windows.Forms.Button();
             this.reminderBtn = new System.Windows.Forms.Button();
             this.reminderListBox = new System.Windows.Forms.ListBox();
@@ -98,6 +98,7 @@
             this.exitBtn.TabIndex = 11;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // enterBtn
             // 
@@ -112,6 +113,7 @@
             // phoneNumTxt
             // 
             this.phoneNumTxt.Location = new System.Drawing.Point(196, 88);
+            this.phoneNumTxt.Mask = "000-0000";
             this.phoneNumTxt.Name = "phoneNumTxt";
             this.phoneNumTxt.Size = new System.Drawing.Size(100, 20);
             this.phoneNumTxt.TabIndex = 9;
@@ -201,6 +203,7 @@
             this.readTab.TabIndex = 1;
             this.readTab.Text = "Read";
             this.readTab.UseVisualStyleBackColor = true;
+            this.readTab.Click += new System.EventHandler(this.readTab_Click);
             // 
             // exitBtn2
             // 
@@ -210,6 +213,7 @@
             this.exitBtn2.TabIndex = 2;
             this.exitBtn2.Text = "Exit";
             this.exitBtn2.UseVisualStyleBackColor = true;
+            this.exitBtn2.Click += new System.EventHandler(this.exitBtn2_Click);
             // 
             // readBtn
             // 
@@ -219,6 +223,7 @@
             this.readBtn.TabIndex = 1;
             this.readBtn.Text = "Read";
             this.readBtn.UseVisualStyleBackColor = true;
+            this.readBtn.Click += new System.EventHandler(this.readBtn_Click);
             // 
             // readListBox
             // 
@@ -230,7 +235,7 @@
             // 
             // reminderTab
             // 
-            this.reminderTab.Controls.Add(this.textBox5);
+            this.reminderTab.Controls.Add(this.reminderTxt);
             this.reminderTab.Controls.Add(this.exitBtn3);
             this.reminderTab.Controls.Add(this.reminderBtn);
             this.reminderTab.Controls.Add(this.reminderListBox);
@@ -242,12 +247,12 @@
             this.reminderTab.Text = "Reminder";
             this.reminderTab.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // reminderTxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(32, 231);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 5;
+            this.reminderTxt.Location = new System.Drawing.Point(32, 231);
+            this.reminderTxt.Name = "reminderTxt";
+            this.reminderTxt.Size = new System.Drawing.Size(100, 20);
+            this.reminderTxt.TabIndex = 5;
             // 
             // exitBtn3
             // 
@@ -257,6 +262,7 @@
             this.exitBtn3.TabIndex = 4;
             this.exitBtn3.Text = "Exit";
             this.exitBtn3.UseVisualStyleBackColor = true;
+            this.exitBtn3.Click += new System.EventHandler(this.exitBtn3_Click);
             // 
             // reminderBtn
             // 
@@ -266,6 +272,7 @@
             this.reminderBtn.TabIndex = 3;
             this.reminderBtn.Text = "Reminder";
             this.reminderBtn.UseVisualStyleBackColor = true;
+            this.reminderBtn.Click += new System.EventHandler(this.reminderBtn_Click);
             // 
             // reminderListBox
             // 
@@ -314,7 +321,7 @@
         private System.Windows.Forms.Button readBtn;
         private System.Windows.Forms.ListBox readListBox;
         private System.Windows.Forms.TabPage reminderTab;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox reminderTxt;
         private System.Windows.Forms.Button exitBtn3;
         private System.Windows.Forms.Button reminderBtn;
         private System.Windows.Forms.ListBox reminderListBox;
