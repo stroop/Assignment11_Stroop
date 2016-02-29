@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+Jacob Stroop
+CIS 353 - Assignment 11
+2/28/16
+*/
+
 namespace Assignment11_Stroop
 {
     public partial class Form1 : Form
@@ -48,9 +54,26 @@ namespace Assignment11_Stroop
             }
         }
 
+        // even handler clears listbox items when deslecting tab
         private void tabControl1_Deslecting(object sender, TabControlCancelEventArgs e)
         {
-            
+            // switch statement with case for each tab
+            // casts sender objec to TabControl to
+            // get the selected index
+            switch ((sender as TabControl).SelectedIndex)
+            {
+                
+                case 0: // friend tab
+                    break;
+                case 1: // read tab
+                    readListBox.Items.Clear();
+                    break;
+                case 2: // reminder tab
+                    reminderListBox.Items.Clear();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void enterBtn_Click(object sender, EventArgs e)
@@ -69,7 +92,7 @@ namespace Assignment11_Stroop
                 // clear textboxes
                 ClearTextBoxes();
                 // display success message
-                MessageBox.Show("Friend Added", friend.ToString());
+                MessageBox.Show(friend.ToString(), "Friend Added");
                 // flush stream buffer
                 writeStream.Flush();
             }
@@ -125,6 +148,12 @@ namespace Assignment11_Stroop
         }
 
         // shared reader method returns list of lines
+        // !!! For some reason does not read friend
+        // from file if it has been added during current
+        // app session - I think this is because the filestream
+        // is still open, but directions indicate to only close
+        // the stream when the application is closed, so that's
+        // how I'm leaving it for now
         private List<string> ReadLinesFromfile()
         {
             List<string> lines = new List<string>();
